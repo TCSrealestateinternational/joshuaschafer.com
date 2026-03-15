@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Joshua Schafer</title>
+  <link rel="canonical" href="https://joshuaschafer.com/privacy.html" />
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    .policy-page { padding-top: var(--nav-height); }
+    .policy-hero {
+      background: var(--dark);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0 60px;
+    }
+    .policy-hero .label { margin-bottom: 1rem; }
+    .policy-body { background: var(--black); }
+    .policy-content { max-width: 760px; padding: 80px 2rem; }
+    .policy-content h2 { font-size: 1.3rem; margin: 2.5rem 0 0.75rem; color: var(--white); }
+    .policy-content p { margin-bottom: 1.25rem; font-size: 0.95rem; }
+    .policy-content ul { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .policy-content ul li { font-size: 0.95rem; color: var(--light); margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Joshua <span>Schafer</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="speaking.html" class="nav__cta">Book Joshua</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="speaking.html">Speaking</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="policy-page">
+    <div class="policy-hero">
+      <div class="container">
+        <p class="label">Legal</p>
+        <h1 style="font-size:clamp(2rem,4vw,3rem);">Privacy Policy</h1>
+        <p style="color:var(--muted);margin-top:0.5rem;">Last updated: March 2025</p>
+      </div>
+    </div>
+    <div class="policy-body">
+      <div class="container">
+        <div class="policy-content">
+          <p>This Privacy Policy describes how joshuaschafer.com ("the Site") collects, uses, and shares information about you when you use the Site.</p>
+          <h2>Information We Collect</h2>
+          <p>We collect information you provide directly when you fill out a contact or inquiry form on the Site, including your name, email address, phone number, and any message content you submit.</p>
+          <h2>How We Use Your Information</h2>
+          <ul>
+            <li>To respond to your inquiries and booking requests</li>
+            <li>To communicate with you about speaking engagements or podcast appearances</li>
+            <li>To improve the Site and user experience</li>
+          </ul>
+          <h2>Information Sharing</h2>
+          <p>We do not sell, trade, or otherwise transfer your personal information to third parties. Form submissions may be processed through third-party platforms (such as GoHighLevel) subject to their own privacy policies.</p>
+          <h2>Cookies</h2>
+          <p>The Site may use basic cookies to improve functionality. No tracking or advertising cookies are used.</p>
+          <h2>Contact</h2>
+          <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:hello@joshuaschafer.com" style="color:var(--accent);">hello@joshuaschafer.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top:none;padding-top:0;">
+        <p>&copy; 2025 Joshua Schafer. All rights reserved.</p>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobile = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => mobile.classList.toggle('open'));
+  </script>
+</body>
+</html>

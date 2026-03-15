@@ -1,0 +1,4 @@
+# Exclude duplicate root-level images (copies live in images/ folder)
+*.jpg
+*.png
+!images/

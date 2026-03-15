@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Joshua Schafer — Educator, Father & Entrepreneur</title>
+  <meta name="description" content="Learn about Joshua Schafer — an educator, homeschool father, and entrepreneur committed to intentional, purpose-driven living." />
+  <link rel="canonical" href="https://joshuaschafer.com/about.html" />
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    /* ── About Hero ── */
+    .about-hero {
+      min-height: 70vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      padding-top: var(--nav-height);
+      overflow: hidden;
+    }
+    .about-hero__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px clamp(2rem, 5vw, 6rem);
+      background: var(--dark);
+    }
+    .about-hero__content .label { margin-bottom: 1rem; }
+    .about-hero__content h1 { margin-bottom: 1.25rem; }
+    .about-hero__content p { max-width: 440px; color: var(--muted); }
+    .about-hero__photo {
+      position: relative;
+    }
+    .about-hero__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ── Story Section ── */
+    .story {
+      background: var(--black);
+    }
+    .story__inner {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .story__text .label { margin-bottom: 1rem; }
+    .story__text h2 { margin-bottom: 0.5rem; }
+    .story__text .divider { margin: 1rem 0 2rem; }
+    .story__text p { margin-bottom: 1.5rem; }
+    .story__aside {
+      position: sticky;
+      top: calc(var(--nav-height) + 32px);
+    }
+    .quote-block {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 2rem 2rem 2rem 2.25rem;
+      margin-bottom: 2rem;
+    }
+    .quote-block blockquote {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--white);
+      font-style: italic;
+    }
+    .quote-block cite {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      font-family: var(--font-head);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-style: normal;
+    }
+    .aside-photo img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ── Values ── */
+    .values {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .values__header { text-align: center; margin-bottom: 64px; }
+    .values__header .label { margin-bottom: 1rem; }
+    .values__header h2 { max-width: 560px; margin: 0 auto; }
+    .values__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .value-card {
+      background: var(--surface-2);
+      padding: 2.5rem 2rem;
+      transition: background 0.2s;
+    }
+    .value-card:hover { background: #242424; }
+    .value-card .num {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .value-card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--white); }
+    .value-card p { font-size: 0.9rem; color: var(--muted); margin: 0; }
+
+    /* ── Bottom CTA ── */
+    .bottom-cta {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+    }
+    .bottom-cta__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .bottom-cta__photo img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .bottom-cta__text .label { margin-bottom: 1rem; }
+    .bottom-cta__text h2 { margin-bottom: 0.5rem; }
+    .bottom-cta__text .divider { margin: 1rem 0 1.75rem; }
+    .bottom-cta__text p { margin-bottom: 1.25rem; }
+    .bottom-cta__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .about-hero { grid-template-columns: 1fr; }
+      .about-hero__photo { min-height: 55vw; }
+      .story__inner { grid-template-columns: 1fr; gap: 48px; }
+      .story__aside { position: static; }
+      .values__grid { grid-template-columns: 1fr 1fr; }
+      .bottom-cta__inner { grid-template-columns: 1fr; gap: 48px; }
+      .bottom-cta__photo img { height: 380px; }
+    }
+    @media (max-width: 600px) {
+      .values__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Joshua <span>Schafer</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="speaking.html" class="nav__cta">Book Joshua</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="speaking.html">Speaking</a>
+    <a href="contact.html">Contact</a>
+    <a href="speaking.html" class="btn btn-primary" style="margin-top:0.5rem; justify-content:center;">Book Joshua</a>
+  </div>
+
+  <!-- ── About Hero ── -->
+  <div class="about-hero">
+    <div class="about-hero__content">
+      <p class="label reveal">The Story</p>
+      <h1 class="reveal reveal-delay-1">Husband.<br/>Father.<br/><span class="text-accent">Builder.</span></h1>
+      <p class="reveal reveal-delay-2">Joshua Schafer is many things — but above all, he's a man who builds. Families, businesses, ideas, and lives. On purpose, every day.</p>
+    </div>
+    <div class="about-hero__photo">
+      <img src="images/LO8A6142.jpg" alt="Joshua Schafer laughing and relaxed, seated on a gray sofa in a dark studio setting" />
+    </div>
+  </div>
+
+  <!-- ── Story ── -->
+  <section class="story">
+    <div class="container">
+      <div class="story__inner">
+        <div class="story__text">
+          <p class="label reveal">About Joshua</p>
+          <h2 class="reveal reveal-delay-1">A Life Built<br/><span class="text-accent">With Intention.</span></h2>
+          <div class="divider reveal reveal-delay-2"></div>
+          <p class="reveal reveal-delay-2">
+            Joshua Schafer didn't stumble into the life he's living — he built it, one deliberate
+            decision at a time. As an educator, his passion has always been simple: help people
+            understand things more clearly and live more confidently as a result.
+          </p>
+          <p class="reveal reveal-delay-3">
+            As a husband and homeschool father, that passion came home. Choosing to educate
+            his own children wasn't just a parenting decision — it was a declaration about what
+            matters most. The family dinner table, the long afternoon lessons, the awkward
+            questions, the patient answers — that's where the real education happens.
+          </p>
+          <p class="reveal reveal-delay-3">
+            Joshua is also an entrepreneur who believes financial literacy and investing are life
+            skills every family deserves access to. He speaks openly about wealth-building
+            principles, the mindset shifts required for long-term success, and why so many
+            people overcomplicate what is fundamentally simple.
+          </p>
+          <p class="reveal">
+            At the core of everything Joshua does is a bedrock of faith — a conviction that
+            purpose-driven work, grounded in integrity, is how you leave something behind
+            worth leaving. That message resonates whether he's in a conference room, on a
+            podcast, or at his kitchen table.
+          </p>
+        </div>
+        <div class="story__aside">
+          <div class="quote-block reveal">
+            <blockquote>"The most important classroom in any child's life is their home."</blockquote>
+            <cite>— Joshua Schafer</cite>
+          </div>
+          <div class="aside-photo reveal reveal-delay-1">
+            <img src="images/LO8A6651.jpg" alt="Joshua Schafer standing in a light gray blazer and jeans, smiling with hands relaxed at his sides" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Values ── -->
+  <section class="values">
+    <div class="container">
+      <div class="values__header">
+        <p class="label reveal">Core Values</p>
+        <h2 class="reveal reveal-delay-1">What Everything<br/><span class="text-accent">is Built On.</span></h2>
+      </div>
+      <div class="values__grid">
+        <div class="value-card reveal">
+          <div class="num">01</div>
+          <h3>Faith First</h3>
+          <p>Every decision — personal, professional, financial — flows from a foundation of faith and a clear sense of calling.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-1">
+          <div class="num">02</div>
+          <h3>Family as Priority</h3>
+          <p>Building a business is secondary to building a family. Joshua has organized his life to reflect that, not just say it.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div class="num">03</div>
+          <h3>Education Over Credentials</h3>
+          <p>Real learning happens in real life. Joshua champions curiosity, mentorship, and hands-on experience over paper validation.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="num">04</div>
+          <h3>Honest Communication</h3>
+          <p>Whether speaking on stage or sitting across the table, Joshua values directness, clarity, and saying what actually needs to be said.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-1">
+          <div class="num">05</div>
+          <h3>Long-Term Thinking</h3>
+          <p>Quick wins are easy to chase. Generational impact requires patience, delayed gratification, and a longer view of success.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div class="num">06</div>
+          <h3>Show Up Fully</h3>
+          <p>Half-measures don't build anything worth having. Whatever Joshua is in, he's all in — as a father, a speaker, an entrepreneur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Bottom CTA ── -->
+  <section class="bottom-cta">
+    <div class="container">
+      <div class="bottom-cta__inner">
+        <div class="bottom-cta__photo reveal">
+          <img src="images/LO8A6729.jpg" alt="Joshua Schafer in a white button-down shirt, holding a gray blazer over his shoulder, looking back with a calm confident expression" />
+        </div>
+        <div class="bottom-cta__text">
+          <p class="label reveal">Work With Joshua</p>
+          <h2 class="reveal reveal-delay-1">Ready to Have Joshua<br/>at Your <span class="text-accent">Event?</span></h2>
+          <div class="divider reveal reveal-delay-2"></div>
+          <p class="reveal reveal-delay-2">
+            Joshua is available for conferences, workshops, church events, real estate
+            summits, homeschool co-ops, and podcast appearances. His talks are always
+            tailored, always honest, and always worth the hour.
+          </p>
+          <div class="bottom-cta__actions reveal reveal-delay-3">
+            <a href="speaking.html" class="btn btn-primary">View Speaking Topics</a>
+            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Joshua <span>Schafer</span></div>
+          <p class="footer__tagline">Educator. Father. Entrepreneur. Speaker. Building a life on purpose.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Navigate</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="speaking.html">Speaking</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h5>Connect</h5>
+          <a href="speaking.html">Book Joshua to Speak</a>
+          <a href="speaking.html#podcast">Podcast Inquiry</a>
+          <a href="contact.html">General Contact</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Joshua Schafer. All rights reserved.</p>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    const toggle = document.getElementById('navToggle');
+    const mobile = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => mobile.classList.toggle('open'));
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
