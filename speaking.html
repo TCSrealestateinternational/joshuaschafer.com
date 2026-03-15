@@ -67,10 +67,16 @@
       transform-origin: bottom;
     }
     .topic:hover::before { transform: scaleY(1); }
-    .topic__icon {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
+    .topic__num {
+      font-family: var(--font-head);
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 1.25rem;
+      transition: color 0.25s;
     }
+    .topic:hover .topic__num { color: var(--surface-2); }
     .topic h3 { margin-bottom: 0.75rem; color: var(--white); }
     .topic p { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.25rem; }
     .topic ul { padding-left: 0; }
@@ -337,7 +343,7 @@
       </div>
       <div class="topics__grid">
         <div class="topic reveal">
-          <div class="topic__icon">✝️</div>
+          <div class="topic__num">01</div>
           <h3>Faith &amp; Values-Based Living</h3>
           <p>A grounded, practical look at what it means to live and lead from a foundation of faith, without the performance.</p>
           <ul>
@@ -348,7 +354,7 @@
           </ul>
         </div>
         <div class="topic reveal reveal-delay-1">
-          <div class="topic__icon">🏡</div>
+          <div class="topic__num">02</div>
           <h3>Homeschooling &amp; Family Education</h3>
           <p>What it's really like to educate your children at home: the wins, the hard days, and why it's worth every bit of it.</p>
           <ul>
@@ -359,7 +365,7 @@
           </ul>
         </div>
         <div class="topic reveal">
-          <div class="topic__icon">📈</div>
+          <div class="topic__num">03</div>
           <h3>Real Estate &amp; Financial Thinking</h3>
           <p>Building wealth isn't complicated, but it does require the right mindset, patience, and a willingness to think differently.</p>
           <ul>
@@ -370,7 +376,7 @@
           </ul>
         </div>
         <div class="topic reveal reveal-delay-1">
-          <div class="topic__icon">🚀</div>
+          <div class="topic__num">04</div>
           <h3>Entrepreneurship &amp; Personal Growth</h3>
           <p>What they don't teach in business school: how to build something real while keeping your family, faith, and sanity intact.</p>
           <ul>
